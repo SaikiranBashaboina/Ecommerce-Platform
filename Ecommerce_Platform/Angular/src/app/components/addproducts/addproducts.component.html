@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" data-bs-theme="dark">
+  <a class="navbar-brand" href="/adminhome/{{id}}" style="padding-left: 10px;">Admin</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/addproducts/{{id}}" style="color: white;">Add Products</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/adminproducts/{{id}}" style="color: white;">Admin Products</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/adminorders/{{id}}" style="color: white;">Admin Orders</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home" style="color: white;">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>{{ isEdit ? 'Edit' : 'Add' }} Product</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="product.name" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" [(ngModel)]="product.price" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="product.description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">Image URL:</label>
+      <input type="text" id="imageUrl" name="imageUrl" [(ngModel)]="product.imageUrl" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">{{ isEdit ? 'Update' : 'Add' }} Product</button>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+ <body style="background-color: rgb(217, 232, 237);">
+    <div style="padding: 50px;">
+      <div class="bootstrap-wrapper">
+        <div class="container">
+            <div class="row mt20">
+                <div class="col-md-6 offset-md-3">
+                    <mat-card style="padding: 10px;">
+                        <div class="container text-center">
+                            <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Transparent.png" alt="Profile Image" style="height: 100px;width: 100px;">
+                        </div>
+                        <h1 class="text-center">Log-in Here !!</h1>
+                        <form (ngSubmit)="login()">
+                            <!-- Email field -->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="email" placeholder="Enter here" [(ngModel)]="email" name="email" required>
+                            </mat-form-field>
+                            <!-- Password Field -->
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" placeholder="Enter here" [(ngModel)]="password" name="password" required>
+                            </mat-form-field>
+                            <div class="container text-center">
+                                <button type="submit" mat-raised-button color="primary">
+                                    Login
+                                </button>
+                                <button class="ml20" type="reset" mat-raised-button color="accent">
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+  </body>
