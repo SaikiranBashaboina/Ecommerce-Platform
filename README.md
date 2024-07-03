@@ -6,12 +6,12 @@ This repository contains an Ecommerce Platform designed to facilitate secure and
 ## Features
 
 ### Admin Features
-- **Authentication and Authorization**: Secure access for admin users.
+- **Login and Logout**: admin authentication and session management.
 - **Product Management**: Comprehensive functionalities for adding, editing, and managing products.
 - **Order Management**: Oversee and manage the entire order lifecycle from acceptance to delivery.
 
 ### User Features
-- **Authentication and Authorization**: Secure access for regular users.
+- **Login and Logout**: user authentication and session management.
 - **Product Browsing**: Browse through a variety of products.
 - **Order Placement**: Place orders and manage order history.
 - **Order Tracking**: Track the status of orders from acceptance to delivery.
